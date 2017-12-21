@@ -1,0 +1,27 @@
+@import '../fonts/font-awesome-4.7.0/scss/font-awesome.scss';
+
+@font-face {
+    font-family: 'Permanent Marker' ;
+    src: url('../fonts/PermanentMarker-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Risque';
+    src: url('../fonts/Risque-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Courgette';
+    src: url('../fonts/Courgette-Regular.ttf');
+}
+
+//----------template-------------
+// @font-face {
+//  font-family: "RalewayRegular";
+// src: url("../fonts/RalewayRegular/RalewayRegular.eot");
+// src: url("../fonts/RalewayRegular/RalewayRegular.eot?#iefix") format("embedded-opentype"),
+// url("../fonts/RalewayRegular/RalewayRegular.woff") format("woff"),
+// url("../fonts/RalewayRegular/RalewayRegular.ttf") format("truetype");
+// font-style: normal;
+// font-weight: normal;
+// }

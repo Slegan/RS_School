@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header_top">
+          <p>Castle defender</p>
+          <a href="https://github.com/rolling-scopes-school/Slegan-front-end-course/tree/game">
+            <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div id="settings_menu" class="settings_menu">
+          <div class="dropdown_box">
+            <p>Language</p>
+            <div class="dropdown">
+            <button id="button_language" class="btn btn-default dropdown-toggle btn-success do_it_large" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              English
+              <span class="caret"></span>
+            </button>
+            <ul id="language" class="dropdown-menu">
+              <li>Russian</li>
+              <li>English</li>
+            </ul>
+          </div>
+          </div>
+          <div class="dropdown_box">
+            <p>Part of speech</p>
+            <div class="dropdown">
+            <button id="button_part_of_speech" class="btn btn-default dropdown-toggle btn-success do_it_large" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Nouns
+              <span class="caret"></span>
+            </button>
+            <ul id="part_of_speech" class="dropdown-menu">
+              <li>Nouns</li>
+              <li>Adjectives</li>
+              <li>Verbs</li>
+            </ul>
+          </div>
+          </div>
+          <div class="dropdown_box">
+            <p>Game speed</p>
+            <div class="dropdown">
+            <button id="button_game_speed" class="btn btn-default dropdown-toggle btn-success do_it_large" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Easy
+              <span class="caret"></span>
+            </button>
+            <ul id="game_speed" class="dropdown-menu">
+              <li>Easy</li>
+              <li>Medium</li>
+              <li>Hard</li>
+            </ul>
+          </div>
+          </div>
+          <div class="dropdown_box">
+            <p>Number of words</p>
+            <div class="dropdown">
+            <button id="button_number_of_words" class="btn btn-default dropdown-toggle btn-success do_it_large" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              10 in row
+              <span class="caret"></span>
+            </button>
+            <ul id="number_of_words" class="dropdown-menu" >
+              <li>10 in row</li>
+              <li>20 in row</li>
+              <li>You can't survive</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="game_wrapper container">
+
+        <section class="description">
+            <p id="descText">Hello, dear friend! Today we will defend
+                our castle from people infected with an unknown disease.
+                In order to reassure the unhappy,
+                translate their indistinct muttering.
+                We hope for you!</p>
+              <button id="start_game" type="button" name="start_game">Let's battle!</button>
+        </section>
+
+        <canvas id="canvas" class="container"></canvas>
+        <form id="formm">
+          <div class="input-group">
+            <input id="input_word" type="text" class="form-control" placeholder="Translated robber nickname">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit">Check</button>
+            </span>
+          </div>
+        </form>
+      </section>
+
+      <section class="additional_information">
+        <p>Your task is to protect the castle from zombies, translating the word that they mutter. If you have achieved success, pay attention to the settings - this will allow you to practice new words.</p>
+        
+      </section>
+
+      <section class="screenshots">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="src/images/screen1.png" alt="...">
+              </div>
+              <div class="item">
+                <img src="src/images/screen3.png" alt="...">
+              </div>
+              <div class="item">
+                <img src="src/images/screen2.png" alt="...">
+              </div>
+              <div class="item">
+                <img src="src/images/screen4.png" alt="...">
+              </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+      </section>
+
+    </main>
+    <div class="touchdown_footer"></div>
+    <footer>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+html{
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.touchdown_footer{
+   flex: 1 0 auto;
+}
+
+footer{
+  background: green;
+  height: 100px;
+  flex: 0 0 auto;
+}
+
+p {
+  font-family: 'Courgette';
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  color: initial;
+  text-decoration: none;
+}
