@@ -1,0 +1,10 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: flex-end;
+}

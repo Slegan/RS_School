@@ -1,0 +1,15 @@
+<div class="leftBox">
+  <app-category-todo 
+    *ngFor="let category of categoryListArray;
+    let i = index"
+    [category] = "category"
+    [numberOfCategory] = i
+    (click) = "onSelect(category)"
+    [class.selected]="category === selectedCategory"
+    routerLink="/{{category.categoryId}}/tasks"
+  >
+  </app-category-todo>
+</div>
+<div class="rightBox">
+  <router-outlet></router-outlet>
+</div>

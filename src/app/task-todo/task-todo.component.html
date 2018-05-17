@@ -1,0 +1,6 @@
+<input type="checkbox" [(ngModel)]="task.done" (click)=toggleCheckBox()>
+<p>{{ task.title }}</p>
+<button 
+    routerLink="/{{categoryId}}/tasks/{{task.title}}/{{task.taskId}}/edit"
+    class="btn btn-primary editButton"
+></button>

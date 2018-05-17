@@ -1,0 +1,7 @@
+<div class="logo"> {{ logo }} </div>
+<div class="searchPanel">
+  <label>Search only made</label>
+  <input type="checkbox" [(ngModel)]="searchDone">
+  <input [(ngModel)]="categoryName" placeholder="Search" >
+  <button class="btn btn-primary searchButton" (click)=onSearch()></button>
+</div>

@@ -1,0 +1,16 @@
+<div class="panel">
+    <div class="box">
+      <input type="text" placeholder=""
+      [(ngModel)] = "newCategoryName" maxlength="15">
+      <button type="button" class="btn btn-success"
+        (click)="createNewCategory()"
+      >Add</button>
+    </div>
+    <div class="box">
+        <input type="text" placeholder=""
+        [(ngModel)] = "newTaskName" maxlength="30">
+        <button type="button" class="btn btn-success"
+          (click)="createNewTask()"
+        >Add</button>
+      </div>
+</div>

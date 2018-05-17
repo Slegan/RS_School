@@ -1,0 +1,35 @@
+<div class="buttonWrapper">
+  <button class="btn btn-primary"
+    routerLink="/{{categoryId}}/tasks"
+  >Save changes</button>
+  <button class="btn btn-danger" 
+    (click)="openModal(closeWarning)">Cancel</button>
+</div>
+<input type="text" placeholder="Title" [(ngModel)]="currentTask.title" >
+<input type="checkbox" [(ngModel)]="currentTask.done">
+<textarea cols="30" rows="10" placeholder="Description" 
+  [(ngModel)]="currentTask.description" ></textarea>
+
+
+<ng-template #closeWarning>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Warning</h4>
+        <button type="button" class="close pull-right" 
+                aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        Сhanges will not be saved
+        <div>
+          <button type="button" class="btn btn-primary"
+            (click)="modalRef.hide()"
+          >Back to edit</button>
+          <button type="button" class="btn btn-danger"
+            routerLink="/{{categoryId}}/tasks"
+            (click)="returnToInitial(closeWarning)"
+          >Ok</button>
+        </div>
+    </div>
+    
+</ng-template>

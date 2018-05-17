@@ -1,0 +1,80 @@
+<div class="leftPart">
+  <button *ngIf="category.children"
+  class="btn btn-primary toggleChilds boxforBG"
+  (click)="toggleNestedCategory()">
+  </button>
+  <p>{{ category.categoryId }}</p>
+</div>
+<p>{{ category.categoryName }}</p>
+<div class="rightPart">
+  <button class="btn btn-primary editButton boxforBG"
+  (click)="openModal(renameCategoryModal)">
+  </button>
+  <button class="btn btn-primary deleteButton boxforBG"
+  (click)="openModal(deleteCategoryModal)">
+  </button>
+  <button class="btn btn-primary addButton boxforBG"
+  (click)="openModal(addNestedCategoryModal)">
+  </button>
+</div>
+
+<ng-template #renameCategoryModal>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Enter new name of category</h4>
+        <button type="button" class="close pull-right" 
+                aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="box">
+          <input type="text" placeholder="{{ category.categoryName }}"
+          [(ngModel)] = "newName" maxlength="15">
+          <button type="button" class="btn btn-success"
+            (click)="renameCategory(renameCategoryModal)"
+          >Ok</button>
+        </div>
+    </div>
+    
+</ng-template>
+
+<ng-template #deleteCategoryModal>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Delete category {{ category.categoryName }} and all nested?</h4>
+        <button type="button" class="close pull-right" 
+                aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="box">
+          <button type="button" class="btn btn-primary"
+            (click)="deleteCategory(deleteCategoryModal)"
+          >Yes</button>
+          <button type="button" class="btn btn-primary"
+            (click)="closeModal(deleteCategoryModal)"
+          >No</button>
+        </div>
+    </div>
+    
+</ng-template>
+
+<ng-template #addNestedCategoryModal>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Enter name of nested category</h4>
+        <button type="button" class="close pull-right" 
+                aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="box">
+          <input type="text" placeholder=""
+          [(ngModel)] = "newName" maxlength="15">
+          <button type="button" class="btn btn-success"
+            (click)="addNestedCategory(addNestedCategoryModal)"
+          >Ok</button>
+        </div>
+    </div>
+    
+</ng-template>
